@@ -25,7 +25,7 @@ env:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}-${{ github.event_name == 'workflow_dispatch' }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-linux-magma:
