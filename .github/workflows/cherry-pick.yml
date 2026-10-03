@@ -55,4 +55,4 @@ jobs:
 
 concurrency:
   group: cherry-pick-pr-${{ github.event.client_payload.pr_num }}
-  cancel-in-progress: true
+  cancel-in-progress: false
