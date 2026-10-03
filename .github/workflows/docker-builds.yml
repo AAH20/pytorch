@@ -18,7 +18,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref_name }}-${{ github.ref_type == 'branch' && github.sha }}-${{ github.event_name == 'workflow_dispatch' && github.run_id }}-${{ github.event_name == 'schedule' }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   ECR_REGISTRY: 308535385114.dkr.ecr.us-east-1.amazonaws.com
